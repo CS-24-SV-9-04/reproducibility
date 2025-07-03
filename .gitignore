@@ -1,3 +1,4 @@
-artifacts
-document
+artifacts/*
+!artifacts/verifypn-linux64
+document/graphs
 __pycache__
