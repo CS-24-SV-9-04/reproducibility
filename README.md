@@ -5,6 +5,6 @@ Running the full benchmark will in the worst case take 1450 hours and 40 minutes
 
 One can use a cluster computer to run the full benchmark with a few modifications to the `run-benchmarks.sh`, specifically by altering the call to `big_job_script.sh` to use sbatch in case of slurm or another form of scheduling.
 
-To rerun the benchmark, firstly run the `reset.sh` script and then `./reproduce.sh` which will fetch all the neccessary files for the benchmark, run the benchmark, process the result and produce the figures. Afterwards the folder called `document` will be populated with the data for the graphs. Thereafter one can use pdflatex to compile the `main.tex` file or upload the folder to overleaf to render the graphs and tables.
+To rerun the benchmark, firstly run the `reset.sh` script and then `./reproduce.sh` which will fetch all the neccessary files for the benchmark, run the benchmark, process the result and produce the figures. Afterwards the folder called `document` will be populated with the data for the graphs. Thereafter one can use pdflatex to compile the `document/main.tex` file or upload the folder to overleaf to render the graphs and tables.
 
 The results from running all benchmarks come preloaded as if the `reproduce.sh` was run on all models from MCC24.
