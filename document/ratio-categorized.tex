@@ -13,10 +13,9 @@
         grid=major,
         legend cell align={left}
     ]
-
     \addplot+[mark=none,dashed,very thick,blue] table [x=counter,y=time] {graphs/ratio/ExplicitCPN_Baseline_ReachabilityCardinality.tab};
     \addlegendentry{Cardinality}
-
+    
     \addplot+[mark=none,solid,very thick,red] table [x=counter,y=time] {graphs/ratio/ExplicitCPN_Baseline_ReachabilityFireability.tab};
     \addlegendentry{Fireability}
 

@@ -17,3 +17,16 @@ for c in "" "ReachabilityCardinality" "ReachabilityFireability"; do
         done
     done
 done
+cat << EOF > document/comparison-table.tex
+\begin{table}[htbp]
+\centering
+\begin{tabular}{|l|c|c|c|c|c|c|c|c|c|}
+\hline
+EOF
+./create-comparison-table.py Baseline-even_RDFS ExplicitCPN-even_RDFS >> document/comparison-table.tex
+cat << EOF >> document/comparison-table.tex
+\end{tabular}
+\caption{Comparison of Explicit and Unfolding where + means positive answers, - means negative answers and $\ast$ means both}
+\label{tab:comparison-table}
+\end{table}
+EOF

@@ -45,6 +45,6 @@ EOF
     done
     echo "" > artifacts/current-benchmark/large
     cd artifacts/current-benchmark
-    tar -cf artifacts/packed-results/$bench_type.tar .
+    tar -cf ../packed-results/$bench_type.tar .
     cd ../..
 done

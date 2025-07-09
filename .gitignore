@@ -2,3 +2,5 @@ artifacts/*
 !artifacts/verifypn-linux64
 document/graphs
 __pycache__
+subset-results/
+document/comparison-table.tex

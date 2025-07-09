@@ -16,14 +16,14 @@
         legend cell align={left}
     ]
 
-    \addplot+[mark=none,dashed,very thick,red] table [x=counter,y=time] {graphs/cactus/ExplicitCPN_ReachabilityCardinality.tab};
-    \addlegendentry{Explicit}
-
     \addplot+[mark=none,solid,very thick,blue] table [x=counter,y=time] {graphs/cactus/Baseline_ReachabilityCardinality.tab};
     \addlegendentry{Unfolding}
 
+    \addplot+[mark=none,dashed,very thick,red] table [x=counter,y=time] {graphs/cactus/ExplicitCPN_ReachabilityCardinality.tab};
+    \addlegendentry{Explicit}
+
     \end{axis}
     \end{tikzpicture}
-    \caption{Cactus plot in reachability cardinality}
+    \caption{Cactus plot in reachability cardinality.}
     \label{fig:sdsd}
 \end{figure}
