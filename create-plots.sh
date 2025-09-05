@@ -6,14 +6,17 @@ for c in "" "ReachabilityCardinality" "ReachabilityFireability"; do
         category_arg=""
     fi
     echo "Creating cactus data with category $c"
-    ./create_cactus_data.py -1 $category_arg ExplicitCPN-even_RDFS Baseline-even_RDFS
-    for a in "ExplicitCPN-even_RDFS" "Baseline-even_RDFS"; do
-        for b in "ExplicitCPN-even_RDFS" "Baseline-even_RDFS"; do
-            if [ "$a" = "$b" ]; then
-                continue
-            fi
-            echo "Creating ratio plot for $a vs $b with category $c"
-            ./create_ratio_plot.py $category_arg $a $b
+    for enable_memory in " " "--memory"; do
+        echo "Creating ratio and cactus with flag '$enable_memory'"
+        ./create_cactus_data.py -1 $category_arg ExplicitCPN-even_RDFS Baseline-even_RDFS $enable_memory
+        for a in "ExplicitCPN-even_RDFS" "Baseline-even_RDFS"; do
+            for b in "ExplicitCPN-even_RDFS" "Baseline-even_RDFS"; do
+                if [ "$a" = "$b" ]; then
+                    continue
+                fi
+                echo "Creating ratio plot for $a vs $b with category $c"
+                ./create_ratio_plot.py $category_arg $a $b $enable_memory
+            done
         done
     done
 done
